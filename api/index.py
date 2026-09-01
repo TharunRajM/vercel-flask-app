@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+from api.routes import api
 
 app = Flask(__name__)
 
@@ -15,3 +16,6 @@ def test():
     return jsonify({
         "message": "Test endpoint is working!"
     }), 200
+
+
+app.register_blueprint(api, url_prefix="/api")
