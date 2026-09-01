@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify
 api = Blueprint("api", __name__)
 
 
-@api.get("/hello")
+@api.get("/blueprint")
 def hello():
     return jsonify({
         "message": "Hello from Blueprint!"
